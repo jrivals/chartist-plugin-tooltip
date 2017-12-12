@@ -60,6 +60,7 @@
       }
 
       on('mouseover', tooltipSelector, function (event) {
+        console.log('mouseover');
         var $point = event.target;
         var tooltipText = '';
 
@@ -122,10 +123,12 @@
       });
 
       on('mouseout', tooltipSelector, function () {
+        console.log('mouseout');
         hide($toolTip);
       });
 
       on('mousemove', null, function (event) {
+        console.log('mousemove');
         if (false === options.anchorToPoint)
         setPosition(event);
       });
